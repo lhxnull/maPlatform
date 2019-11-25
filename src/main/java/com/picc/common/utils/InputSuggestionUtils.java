@@ -2,6 +2,7 @@ package com.picc.common.utils;
 
 import com.picc.common.runner.OrganizationCache;
 import com.picc.map.entity.InputSuggest;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.UnsupportedEncodingException;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+@Slf4j
 public class InputSuggestionUtils {
 
     public static final String ENCODER = "UTF-8";
@@ -62,6 +63,7 @@ public class InputSuggestionUtils {
 
             urlKey = OrganizationCache.getSWConfigValue("inputUrl")+"&keywords="+keyword+ "&city="+city;
             String result = HttpUtils.sendGet(urlKey);
+            log.info("四维录入提示结果：{}",result);
             return AnalyticUtil.getInstance().processSuggestionRespSW(result);
         }
 

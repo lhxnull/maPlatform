@@ -43,6 +43,7 @@ public class SWController {
         if (StringUtils.isBlank(keyWord)) {
             return new ResultResponse().error().message("参数无效");
         }
+        log.info("四维录入提示：city：{},keywoed:{}",city,keyWord);
         keyWord=keyWord.replace(" ", "");
         List<InputSuggest> inputSuggests = InputSuggestionUtils.inputSuggestion(city,
                 keyWord, MapUtil.MAP_SIWEI);

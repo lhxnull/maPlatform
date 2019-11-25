@@ -2,13 +2,14 @@ package com.picc.common.utils;
 
 
 import com.picc.common.runner.OrganizationCache;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
 import java.net.*;
 import java.util.Map;
 
-
+@Slf4j
 public class HttpUtils {
 
     private static final int TIME = 10000;
@@ -66,6 +67,7 @@ public class HttpUtils {
     public static String sendGet(String url) {
         StringBuilder result = new StringBuilder();
         BufferedReader in = null;
+        log.info("url:{}",url);
         try {
             URL realUrl = new URL(url);
             // 打开和URL之间的连接
@@ -83,7 +85,7 @@ public class HttpUtils {
                 result.append(line);
             }
         } catch (Exception e) {
-//            log.error("发送 GET 请求出现异常:",e);
+            log.error("发送 GET 请求出现异常:{}",e);
         }
         // 使用finally块来关闭输入流
         finally {

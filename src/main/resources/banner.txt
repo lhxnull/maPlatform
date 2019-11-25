@@ -1,5 +1,5 @@
 *******************************************
-|   PICC~~~~~                             *
+|   PICC-MAPLATFORM~~~~~                             *
 |                                        **
 |    Shiro edition v2.0                   *
 |    Spring-Boot-Version: ${spring-boot.version}  *

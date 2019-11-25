@@ -151,17 +151,6 @@ public class SystemConfigManager {
 
 
 
-	/**
-	 * 启动配置变化更新线程
-	 */
-//	public void initAndStartConfigChangeMonitor(){
-//		unifiedConfiguration =getPropertiesMaps("config.properties");
-//		//获取百度key
-//		bdMapKey=getPropertiesMap("mapCenter.properties");
-//		//
-//		gdUrl=getPropertiesMap("GDServiceUrl.properties");
-//		swUrl=getPropertiesMap("SWServiceUrl.properties");
-//	}
 
 	/**
 	 * 获取百度key
