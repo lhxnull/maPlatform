@@ -211,7 +211,7 @@ public class InputSuggestionUtils {
         }else {
             urlKey = OrganizationCache.getSWConfigValue("getDistince") + startcoords[1] + "," + startcoords[0] + "&ePoint=" + endcoords[1] + ","
                     + endcoords[0];
-            String result = HttpUtils.hpptGetRequestByProxy(urlKey);
+            String result = HttpUtils.sendGet(urlKey);
             return AnalyticUtil.getInstance().processNavigateJsonRespToSW(result);
         }
 

@@ -31,7 +31,6 @@ import java.util.Set;
 @RestControllerAdvice
 @Order(value = Ordered.HIGHEST_PRECEDENCE)
 public class GlobalExceptionHandler {
-    private  static  final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler. class);
 
     @ExceptionHandler(value = Exception.class)
     public ResultResponse handleException(Exception e) {

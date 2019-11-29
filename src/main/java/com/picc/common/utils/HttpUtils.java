@@ -47,12 +47,13 @@ public class HttpUtils {
                 return sb.toString();
             }
         } catch (Exception e) {
-            System.out.println(e);
+            log.error("发送 get 请求出现异常:",e);
         }finally{
             if(in!=null)
                 try {
                     in.close();
                 } catch (IOException e) {
+                    log.error("关闭流异常:",e);
                 }
         }
         return null;
@@ -130,7 +131,7 @@ public class HttpUtils {
                 result.append(line);
             }
         } catch (Exception e) {
-//            log.error("发送 POST 请求出现异常:",e);
+            log.error("发送 POST 请求出现异常:",e);
         }
         // 使用finally块来关闭输出流、输入流
         finally {
@@ -180,7 +181,7 @@ public class HttpUtils {
                 result.append(line);
             }
         } catch (Exception e) {
-//            log.error("发送 POST 请求出现异常:",e);
+            log.error("发送 POST 请求出现异常:",e);
         }
         // 使用finally块来关闭输出流、输入流
         finally {
@@ -203,7 +204,7 @@ public class HttpUtils {
                 in.close();
             }
         } catch (IOException ex) {
-//                log.error("关闭流异常:",ex);
+                log.error("关闭流异常:",ex);
         }
     }
 

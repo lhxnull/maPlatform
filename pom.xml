@@ -27,6 +27,7 @@
 
     <dependencies>
         <!-- Spring系列 -->
+        <!-- 本地启动不需要排除spring-boot-starter-tomcat-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -36,6 +37,11 @@
                     <artifactId>spring-boot-starter-tomcat</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <!--<scope>provided</scope>--> <!--provided表明该包只在编译和测试的时候用 -->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
