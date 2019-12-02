@@ -1,3 +1,5 @@
+#生产环境
+proxy: 10.133.240.246
 spring:
   datasource:
     dynamic:
@@ -15,22 +17,13 @@ spring:
       datasource:
         # 数据源-1，名称为 base
         base:
-          username: root
-          password: 123456
-          driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://127.0.0.1:3306/febs_base?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
-        # 数据源-2，名称为 quartz
-        quartz:
-          username: root
-          password: 123456
-          driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://127.0.0.1:3306/febs_quartz?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
+          jndi-name: maPlatformDatabases
 
   redis:
     # Redis数据库索引（默认为 0）
-    database: 0
+    database: 4
     # Redis服务器地址
-    host: 127.0.0.1
+    host: 10.10.1.148
     # Redis服务器连接端口
     port: 6379
     # Redis 密码
@@ -47,3 +40,4 @@ spring:
         max-wait: 10000
     # 连接超时时间（毫秒）
     timeout: 0
+

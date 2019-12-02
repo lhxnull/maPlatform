@@ -1,3 +1,5 @@
+#测试环境
+proxy: proxy.piccnet.com.cn
 spring:
   datasource:
     dynamic:
@@ -47,3 +49,4 @@ spring:
         max-wait: 10000
     # 连接超时时间（毫秒）
     timeout: 0
+

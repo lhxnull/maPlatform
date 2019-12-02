@@ -37,6 +37,8 @@ public class MapStartedUpRunner implements ApplicationRunner {
     private String contextPath;
     @Value("${spring.profiles.active}")
     private String active;
+    @Value("${proxy}")
+    private String proxy;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -60,6 +62,7 @@ public class MapStartedUpRunner implements ApplicationRunner {
         OrganizationCache.BDqueue = mapUrlConfigProperites.getQueue();
         //获取项目基本配置
         OrganizationCache.baseConfigMap = febsProperties.getData();
+        OrganizationCache.baseConfigMap.put("proxy",proxy);
         //获取市区编码
         OrganizationCache.zoneAddr2codeGDMap = OrganizationCache.getZoneAddr2CodeMap(OrganizationCache.fileName);
         //四维url
