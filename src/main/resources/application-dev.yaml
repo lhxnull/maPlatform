@@ -18,19 +18,19 @@ spring:
           username: ischedule_new
           password: ischedule_new
           driver-class-name: oracle.jdbc.OracleDriver
-          url: jdbc:oracle:thin:@10.10.68.91:1521:orcl
+          url: jdbc:oracle:thin:@ip:1521:orcl
         # 数据源-2，名称为 quartz
         quartz:
           username: ischedule_new
           password: ischedule_new
           driver-class-name: oracle.jdbc.OracleDriver
-          url: jdbc:oracle:thin:@10.10.68.91:1521:orcl
+          url: jdbc:oracle:thin:@ip:1521:orcl
 
   redis:
     # Redis数据库索引（默认为 0）
     database: 4
     # Redis服务器地址
-    host: 10.10.1.148
+    host: ip
     # Redis服务器连接端口
     port: 6379
     # Redis 密码
