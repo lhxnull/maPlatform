@@ -37,12 +37,12 @@ com/picc/config/DSConfig.java
 <dependency>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-web</artifactId>
-    <!-- <exclusions>
+     <exclusions>
         <exclusion>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-tomcat</artifactId>
         </exclusion>
-    </exclusions>-->
+    </exclusions>
 </dependency>
 ```
 - application.yml 切换为开发环境weblogic
