@@ -23,8 +23,8 @@ spring:
           url: jdbc:oracle:thin:@ip:1521:orcl
         # 数据源-2，名称为 quartz
         quartz:
-          username: ischedule_new
-          password: ischedule_new
+          username: xx
+          password: xx
           driver-class-name: oracle.jdbc.OracleDriver
           url: jdbc:oracle:thin:@ip:1521:orcl
 
